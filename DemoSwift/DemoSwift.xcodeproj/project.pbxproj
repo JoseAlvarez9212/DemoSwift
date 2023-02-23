@@ -56,6 +56,9 @@
 		8259C43C29A3DB0600B1DEFF /* DemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				8259C45129A4044000B1DEFF /* Models */,
+				82C6254D29A6E06A00DAEC7C /* Views */,
+				82C6254E29A6E08E00DAEC7C /* Controllers */,
 				8259C43D29A3DB0600B1DEFF /* AppDelegate.swift */,
 				8259C43F29A3DB0600B1DEFF /* SceneDelegate.swift */,
 				8259C44129A3DB0600B1DEFF /* ViewController.swift */,
@@ -65,6 +68,27 @@
 				8259C44B29A3DB0800B1DEFF /* Info.plist */,
 			);
 			path = DemoSwift;
+			sourceTree = "<group>";
+		};
+		8259C45129A4044000B1DEFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		82C6254D29A6E06A00DAEC7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		82C6254E29A6E08E00DAEC7C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

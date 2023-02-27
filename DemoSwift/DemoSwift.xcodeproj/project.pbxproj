@@ -13,6 +13,7 @@
 		8259C44529A3DB0600B1DEFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8259C44329A3DB0600B1DEFF /* Main.storyboard */; };
 		8259C44729A3DB0800B1DEFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8259C44629A3DB0800B1DEFF /* Assets.xcassets */; };
 		8259C44A29A3DB0800B1DEFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8259C44829A3DB0800B1DEFF /* LaunchScreen.storyboard */; };
+		82C6255C29AD366D00DAEC7C /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6255B29AD366D00DAEC7C /* LoginView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8259C44629A3DB0800B1DEFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8259C44929A3DB0800B1DEFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8259C44B29A3DB0800B1DEFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C6255B29AD366D00DAEC7C /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		82C6254D29A6E06A00DAEC7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				82C6255A29AD362200DAEC7C /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,6 +92,14 @@
 			children = (
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		82C6255A29AD362200DAEC7C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				82C6255B29AD366D00DAEC7C /* LoginView.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 				8259C44A29A3DB0800B1DEFF /* LaunchScreen.storyboard in Resources */,
 				8259C44729A3DB0800B1DEFF /* Assets.xcassets in Resources */,
 				8259C44529A3DB0600B1DEFF /* Main.storyboard in Resources */,
+				82C6255C29AD366D00DAEC7C /* LoginView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

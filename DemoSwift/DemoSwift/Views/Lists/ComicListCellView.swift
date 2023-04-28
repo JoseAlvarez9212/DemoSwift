@@ -7,8 +7,9 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
-class CharacterListCellView : UITableViewCell {
+class ComicListCellView : UITableViewCell {
     let characterImageView:  UIImageView = {
         let imageView =  UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -44,8 +45,8 @@ class CharacterListCellView : UITableViewCell {
         addSubview(characterDescription)
         
         characterImageView.layout{
-            $0.leading == leadingAnchor
-            $0.top == topAnchor
+            $0.leading == leadingAnchor + 12
+            $0.top == topAnchor + 12
             $0.height == 80
             $0.width == 80
         }
@@ -61,8 +62,9 @@ class CharacterListCellView : UITableViewCell {
         }
     }
     
-    func configure(_ model: CharacterModel) {
-        self.characterName.text = model.name
+    func configure(_ model: Comic) {
+        self.characterName.text = model.title
         self.characterDescription.text = model.description
+        self.characterImageView.kf.setImage(with: model.thumbnail.url)
     }
 }

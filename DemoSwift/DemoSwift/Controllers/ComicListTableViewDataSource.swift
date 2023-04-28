@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-final class ListCharactersTableViewDataSource: NSObject, UITableViewDataSource {
+final class ComicListTableViewDataSource: NSObject, UITableViewDataSource {
     private let tableView: UITableView
     
-    private(set) var characters:[CharacterModel] = [] {
+    private(set) var characters:[Comic] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -19,7 +19,7 @@ final class ListCharactersTableViewDataSource: NSObject, UITableViewDataSource {
         }
     }
     
-    init(tableView: UITableView, characters: [CharacterModel] = []) {
+    init(tableView: UITableView, characters: [Comic] = []) {
         self.tableView = tableView
         self.characters = characters
     }
@@ -29,7 +29,7 @@ final class ListCharactersTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterListCellView", for: indexPath) as! CharacterListCellView
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ComicListCellView", for: indexPath) as! ComicListCellView
         
         let character = characters[indexPath.row]
         cell.configure(character)
@@ -37,7 +37,7 @@ final class ListCharactersTableViewDataSource: NSObject, UITableViewDataSource {
         return cell
     }
     
-    func set(characters:[CharacterModel]) {
+    func set(characters:[Comic]) {
         self.characters = characters
     }
 }

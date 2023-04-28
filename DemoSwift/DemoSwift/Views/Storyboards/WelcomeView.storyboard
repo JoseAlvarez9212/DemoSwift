@@ -15,8 +15,31 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vzm-NQ-4hz">
+                                <rect key="frame" x="10" y="153" width="373" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hs-uy-cMz">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="d4S-Y9-F7l"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Comics"/>
+                                        <connections>
+                                            <action selector="btnComics:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="D2g-0d-O8m"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vzm-NQ-4hz" secondAttribute="trailing" constant="10" id="Iwg-Qh-brb"/>
+                            <constraint firstItem="Vzm-NQ-4hz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="Nja-H6-Uff"/>
+                            <constraint firstItem="Vzm-NQ-4hz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="uix-zQ-Of9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Swift Demo" id="vdt-Ax-8e4"/>
                 </viewController>

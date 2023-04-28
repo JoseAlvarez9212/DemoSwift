@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class CharacterListView : UIView {
+class ComicListView : UIView {
     let characterTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(CharacterListCellView.self, forCellReuseIdentifier: "CharacterListCellView")
+        tableView.register(ComicListCellView.self, forCellReuseIdentifier: "ComicListCellView")
         return tableView
     }()
     

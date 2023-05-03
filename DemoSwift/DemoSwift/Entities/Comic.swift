@@ -9,6 +9,6 @@ import Foundation
 
 struct Comic {
     let title: String
-    let description: String
+    let description: String?
     let thumbnail: ThumbnailComic
 }

@@ -10,7 +10,7 @@ import Foundation
 
 struct ComicDTO : Decodable {
     let title: String
-    let detail: String
+    let detail: String?
     let thumbnail: ThumbnailComicDTO
     
     private enum CodingKeys : String, CodingKey {

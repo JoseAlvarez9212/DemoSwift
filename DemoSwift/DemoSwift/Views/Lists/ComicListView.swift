@@ -9,6 +9,13 @@ import Foundation
 import UIKit
 
 class ComicListView : UIView {
+    let containerView: UIView = {
+        let cView =  UIView()
+        cView.translatesAutoresizingMaskIntoConstraints = false
+        //cView.backgroundColor = UIColor.red
+        return cView
+    }()
+    
     let characterTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,13 +33,20 @@ class ComicListView : UIView {
     }
     
     func setupView() {
-        addSubview(characterTableView)
-        
-        characterTableView.layout{
-            $0.leading == leadingAnchor
-            $0.trailing == trailingAnchor
-            $0.top == topAnchor
-            $0.bottom == bottomAnchor
+        addSubview(containerView)
+        containerView.addSubview(characterTableView)
+        containerView.layout {
+            $0.leading == safeAreaLayoutGuide.leadingAnchor
+            $0.trailing == safeAreaLayoutGuide.trailingAnchor
+            $0.top == safeAreaLayoutGuide.topAnchor
+            $0.bottom == safeAreaLayoutGuide.bottomAnchor
         }
+        characterTableView.layout{
+            $0.leading == containerView.leadingAnchor
+            $0.trailing == containerView.trailingAnchor
+            $0.top == containerView.topAnchor
+            $0.bottom == containerView.bottomAnchor
+        }
+        
     }
 }

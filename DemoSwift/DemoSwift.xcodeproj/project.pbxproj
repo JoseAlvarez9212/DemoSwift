@@ -146,7 +146,6 @@
 				8264F67329F9B10200D19FCA /* ComicsViewPresenter.swift */,
 				8264F67529F9B11F00D19FCA /* ComicsViewInteractor.swift */,
 				8264F67729F9B15F00D19FCA /* ComicsViewRouter.swift */,
-				8264F67929F9B17B00D19FCA /* ComicsView.swift */,
 			);
 			path = Comics;
 			sourceTree = "<group>";
@@ -163,6 +162,7 @@
 		82C6254D29A6E06A00DAEC7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				82CDAAAB29FC80C9008C8D1D /* Views */,
 				82CDAAA929FC74A8008C8D1D /* Lists */,
 				82C6255F29AD43A100DAEC7C /* Controls */,
 				82C6255A29AD362200DAEC7C /* Storyboards */,
@@ -173,11 +173,9 @@
 		82C6254E29A6E08E00DAEC7C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				82CDAAAA29FC77E4008C8D1D /* Comics */,
 				82174FE529F6D5FE00ED6754 /* WelcomeViewController.swift */,
 				82C6255D29AD370400DAEC7C /* LoginController.swift */,
-				82174FF429F6EB0E00ED6754 /* ComicListTableViewDataSource.swift */,
-				82C08F8829F8408D0041CE41 /* ListOfComicTableViewDelegate.swift */,
-				82CDAAA329FC2727008C8D1D /* ComicsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +213,24 @@
 				82174FF229F6E02100ED6754 /* ComicListCellView.swift */,
 			);
 			path = Lists;
+			sourceTree = "<group>";
+		};
+		82CDAAAA29FC77E4008C8D1D /* Comics */ = {
+			isa = PBXGroup;
+			children = (
+				82174FF429F6EB0E00ED6754 /* ComicListTableViewDataSource.swift */,
+				82C08F8829F8408D0041CE41 /* ListOfComicTableViewDelegate.swift */,
+				82CDAAA329FC2727008C8D1D /* ComicsViewController.swift */,
+			);
+			path = Comics;
+			sourceTree = "<group>";
+		};
+		82CDAAAB29FC80C9008C8D1D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8264F67929F9B17B00D19FCA /* ComicsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

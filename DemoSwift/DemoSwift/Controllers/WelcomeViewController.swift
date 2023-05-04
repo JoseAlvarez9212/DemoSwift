@@ -20,31 +20,4 @@ class WelcomeViewController: UIViewController {
         self.navigationController?.pushViewController(comicsController, animated: true)
         
     }
-    
-    /*
-    var mainView: CharacterListView { self.view as! CharacterListView }
-    var apiService = ApiMarvelServices()
-    private var tableViewDataSource: ListCharactersTableViewDataSource?
-    private var tableViewDelegate: ListOfCharactersTableViewDelegate?
-        
-    override func loadView() {
-        super.loadView()
-        
-        view = CharacterListView()
-        tableViewDelegate = ListOfCharactersTableViewDelegate()
-        tableViewDataSource = ListCharactersTableViewDataSource(tableView: mainView.characterTableView)
-        mainView.characterTableView.dataSource = tableViewDataSource
-        mainView.characterTableView.delegate = tableViewDelegate
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        Task {
-            let characters = await apiService.getListOfCharacters()
-            print("Characters \(characters)")
-            tableViewDataSource?.set(characters: characters.data.results)
-        }
-    
-    } */
 }

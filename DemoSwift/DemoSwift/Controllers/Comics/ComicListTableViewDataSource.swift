@@ -7,8 +7,10 @@
 
 import Foundation
 import UIKit
+import SkeletonView
 
-final class ComicListTableViewDataSource: NSObject, UITableViewDataSource {
+// MARK: ComicListTableViewDataSource : SkeletonTableViewDataSource
+final class ComicListTableViewDataSource: NSObject, SkeletonTableViewDataSource {
     private let tableView: UITableView
     
     private(set) var characters:[Comic] = [] {
@@ -24,17 +26,23 @@ final class ComicListTableViewDataSource: NSObject, UITableViewDataSource {
         self.characters = characters
     }
     
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return ComicListCellView.cellId
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         characters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ComicListCellView", for: indexPath) as! ComicListCellView
         
-        let character = characters[indexPath.row]
-        cell.configure(character)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: ComicListCellView.cellId) as? ComicListCellView {
+            let character = characters[indexPath.row]
+            cell.configure(character)
+            return cell
+        }
         
-        return cell
+        return UITableViewCell()
     }
     
     func set(characters:[Comic]) {

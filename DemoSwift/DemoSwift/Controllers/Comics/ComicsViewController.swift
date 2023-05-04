@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SkeletonView
 
 protocol ComicsViewProtocol: AnyObject {
     func showComics(_ comics: [Comic])
@@ -14,12 +15,15 @@ protocol ComicsViewProtocol: AnyObject {
 }
 
 class ComicsViewController: UIViewController {
-
+    
+    // MARK: - Properties
+    
     private var tableViewDataSource: ComicListTableViewDataSource?
     private var tableViewDelegate: ListOfComicTableViewDelegate?
     var presenter: ComicsViewPresenterProtocol?
     var comics: [Comic] = []
     
+    // MARK: UI Init
     
     var containerView: UIView = {
         let cView =  UIView()
@@ -30,24 +34,36 @@ class ComicsViewController: UIViewController {
     let characterTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(ComicListCellView.self, forCellReuseIdentifier: "ComicListCellView")
-        
+        tableView.register(ComicListCellView.self, forCellReuseIdentifier: ComicListCellView.cellId)
+        tableView.estimatedRowHeight = 100
         return tableView
     }()
     
+    // MARK: - Life cycle
     
-    override func loadView() {
-        super.loadView()
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Comics"
         Configure()
-                
         tableViewDelegate = ListOfComicTableViewDelegate()
         tableViewDataSource = ComicListTableViewDataSource(tableView: characterTableView)
-        characterTableView.dataSource = tableViewDataSource
-        characterTableView.delegate = tableViewDelegate
+        self.characterTableView.dataSource = tableViewDataSource
+        self.characterTableView.delegate = tableViewDelegate
+        
+        let interactor = ComicsViewInteractor()
+        let presenter = ComicsViewPresenter(interactor: interactor)
+        
+        presenter.view = self
+        self.presenter = presenter
+        self.presenter?.viewDidLoad()
+        
+        setupSkeleton()
     }
     
-    func Configure() {
+    // MARK: Private methods
+    
+    private func Configure() {
+        containerView = ComicListView()
         view.addSubview(containerView)
         containerView.addSubview(characterTableView)
         
@@ -63,34 +79,24 @@ class ComicsViewController: UIViewController {
             $0.top == containerView.topAnchor
             $0.bottom == containerView.bottomAnchor
         }
-        
-        containerView = ComicListView()
-        view.addSubview(containerView)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let interactor = ComicsViewInteractor()
-        let presenter = ComicsViewPresenter(interactor: interactor)
-        
-        presenter.view = self
-        self.presenter = presenter
-        self.presenter?.viewDidLoad()
-        
+    private func setupSkeleton() {
+        self.characterTableView.isSkeletonable = true
+        self.characterTableView.showAnimatedGradientSkeleton()
     }
-    
 }
 
 extension ComicsViewController: ComicsViewProtocol {
-     func showComics(_ comics: [Comic]) {
-         self.comics = comics
-         self.tableViewDataSource?.set(characters: self.comics)
-     }
-     
-     func showError(message: String) {
-     //self.present(on: self, message: message)
-     }
- }
- 
- 
+    func showComics(_ comics: [Comic]) {
+        self.comics = comics
+        self.tableViewDataSource?.set(characters: self.comics)
+        DispatchQueue.main.async {
+            self.characterTableView.hideSkeleton()
+        }
+    }
+    
+    func showError(message: String) {
+        //self.present(on: self, message: message)
+    }
+}

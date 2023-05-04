@@ -11,7 +11,6 @@
 		82174FE929F6D82D00ED6754 /* ApiMarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82174FE829F6D82D00ED6754 /* ApiMarvelService.swift */; };
 		82174FED29F6D9AD00ED6754 /* ComicDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82174FEC29F6D9AD00ED6754 /* ComicDTO.swift */; };
 		82174FEF29F6DB9600ED6754 /* MarvelApiBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82174FEE29F6DB9600ED6754 /* MarvelApiBaseResponse.swift */; };
-		82174FF129F6DE1600ED6754 /* ComicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82174FF029F6DE1600ED6754 /* ComicListView.swift */; };
 		82174FF329F6E02100ED6754 /* ComicListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82174FF229F6E02100ED6754 /* ComicListCellView.swift */; };
 		82174FF529F6EB0E00ED6754 /* ComicListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82174FF429F6EB0E00ED6754 /* ComicListTableViewDataSource.swift */; };
 		82174FF829F6F45F00ED6754 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 82174FF729F6F45F00ED6754 /* Kingfisher */; };
@@ -22,9 +21,10 @@
 		8264F67429F9B10200D19FCA /* ComicsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8264F67329F9B10200D19FCA /* ComicsViewPresenter.swift */; };
 		8264F67629F9B11F00D19FCA /* ComicsViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8264F67529F9B11F00D19FCA /* ComicsViewInteractor.swift */; };
 		8264F67829F9B15F00D19FCA /* ComicsViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8264F67729F9B15F00D19FCA /* ComicsViewRouter.swift */; };
-		8264F67A29F9B17B00D19FCA /* ComicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8264F67929F9B17B00D19FCA /* ComicsView.swift */; };
 		8264F67E29F9B2BB00D19FCA /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8264F67D29F9B2BB00D19FCA /* Comic.swift */; };
 		8264F68029F9B32000D19FCA /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8264F67F29F9B32000D19FCA /* Thumbnail.swift */; };
+		82AA18302A02E3EC00A390A5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AA182F2A02E3EC00A390A5 /* Extensions.swift */; };
+		82AA18332A02F5B000A390A5 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 82AA18322A02F5B000A390A5 /* SkeletonView */; };
 		82BFE05629F4481A00F71739 /* WelcomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82BFE05529F4481A00F71739 /* WelcomeView.storyboard */; };
 		82C08F8929F8408D0041CE41 /* ListOfComicTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C08F8829F8408D0041CE41 /* ListOfComicTableViewDelegate.swift */; };
 		82C6255C29AD366D00DAEC7C /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6255B29AD366D00DAEC7C /* LoginView.storyboard */; };
@@ -41,7 +41,6 @@
 		82174FE829F6D82D00ED6754 /* ApiMarvelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMarvelService.swift; sourceTree = "<group>"; };
 		82174FEC29F6D9AD00ED6754 /* ComicDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDTO.swift; sourceTree = "<group>"; };
 		82174FEE29F6DB9600ED6754 /* MarvelApiBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelApiBaseResponse.swift; sourceTree = "<group>"; };
-		82174FF029F6DE1600ED6754 /* ComicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListView.swift; sourceTree = "<group>"; };
 		82174FF229F6E02100ED6754 /* ComicListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListCellView.swift; sourceTree = "<group>"; };
 		82174FF429F6EB0E00ED6754 /* ComicListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListTableViewDataSource.swift; sourceTree = "<group>"; };
 		8259C43A29A3DB0600B1DEFF /* DemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,9 +52,9 @@
 		8264F67329F9B10200D19FCA /* ComicsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsViewPresenter.swift; sourceTree = "<group>"; };
 		8264F67529F9B11F00D19FCA /* ComicsViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsViewInteractor.swift; sourceTree = "<group>"; };
 		8264F67729F9B15F00D19FCA /* ComicsViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsViewRouter.swift; sourceTree = "<group>"; };
-		8264F67929F9B17B00D19FCA /* ComicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsView.swift; sourceTree = "<group>"; };
 		8264F67D29F9B2BB00D19FCA /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		8264F67F29F9B32000D19FCA /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		82AA182F2A02E3EC00A390A5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		82BFE05529F4481A00F71739 /* WelcomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeView.storyboard; sourceTree = "<group>"; };
 		82C08F8829F8408D0041CE41 /* ListOfComicTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfComicTableViewDelegate.swift; sourceTree = "<group>"; };
 		82C6255B29AD366D00DAEC7C /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82AA18332A02F5B000A390A5 /* SkeletonView in Frameworks */,
 				82174FF829F6F45F00ED6754 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				82C6256329AD73D500DAEC7C /* Autolayout.swift */,
+				82AA182F2A02E3EC00A390A5 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -209,7 +210,6 @@
 		82CDAAA929FC74A8008C8D1D /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				82174FF029F6DE1600ED6754 /* ComicListView.swift */,
 				82174FF229F6E02100ED6754 /* ComicListCellView.swift */,
 			);
 			path = Lists;
@@ -228,7 +228,6 @@
 		82CDAAAB29FC80C9008C8D1D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8264F67929F9B17B00D19FCA /* ComicsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +250,7 @@
 			name = DemoSwift;
 			packageProductDependencies = (
 				82174FF729F6F45F00ED6754 /* Kingfisher */,
+				82AA18322A02F5B000A390A5 /* SkeletonView */,
 			);
 			productName = DemoSwift;
 			productReference = 8259C43A29A3DB0600B1DEFF /* DemoSwift.app */;
@@ -282,6 +282,7 @@
 			mainGroup = 8259C43129A3DB0600B1DEFF;
 			packageReferences = (
 				82174FF629F6F45F00ED6754 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				82AA18312A02F5B000A390A5 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 8259C43B29A3DB0600B1DEFF /* Products */;
 			projectDirPath = "";
@@ -312,8 +313,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8264F67A29F9B17B00D19FCA /* ComicsView.swift in Sources */,
-				82174FF129F6DE1600ED6754 /* ComicListView.swift in Sources */,
 				82174FEF29F6DB9600ED6754 /* MarvelApiBaseResponse.swift in Sources */,
 				82CDAAA429FC2727008C8D1D /* ComicsViewController.swift in Sources */,
 				82174FF329F6E02100ED6754 /* ComicListCellView.swift in Sources */,
@@ -321,6 +320,7 @@
 				8264F67429F9B10200D19FCA /* ComicsViewPresenter.swift in Sources */,
 				8264F67829F9B15F00D19FCA /* ComicsViewRouter.swift in Sources */,
 				82174FE929F6D82D00ED6754 /* ApiMarvelService.swift in Sources */,
+				82AA18302A02E3EC00A390A5 /* Extensions.swift in Sources */,
 				82C6256429AD73D500DAEC7C /* Autolayout.swift in Sources */,
 				82174FF529F6EB0E00ED6754 /* ComicListTableViewDataSource.swift in Sources */,
 				82C6255E29AD370400DAEC7C /* LoginController.swift in Sources */,
@@ -550,6 +550,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		82AA18312A02F5B000A390A5 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -557,6 +565,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 82174FF629F6F45F00ED6754 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		82AA18322A02F5B000A390A5 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82AA18312A02F5B000A390A5 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
